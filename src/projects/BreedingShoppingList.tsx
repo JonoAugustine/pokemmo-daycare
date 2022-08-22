@@ -44,6 +44,8 @@ export function BreedingShoppingList(props: { project: IProject }) {
             the following pokemon & items. If you buy or catch a pokemon that is
             already already has some desired IVs, just add it to the project.{" "}
             <strong>Estimated spread is to reduce purchasing costs.</strong>
+            <br></br>
+            Estimated final cost: Y{((totalLength * 10_000) + (project.averagePricing * totalLength)).toLocaleString()}
           </>
         }
       />
