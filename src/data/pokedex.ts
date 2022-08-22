@@ -3,11 +3,11 @@
  * @license GPL-3.0-only
  */
 
-import { useAllPokemon } from "@pokemmo/pokemon/pokemonHooks";
-import { getStore } from "@pokemmo/state/store";
-import { uppercaseFirst } from "@pokemmo/utils";
-import { memoize } from "lodash-es";
-import { OptionsType, OptionTypeBase } from "react-select";
+import { useAllPokemon } from "@pokemmo/pokemon/pokemonHooks"
+import { getStore } from "@pokemmo/state/store"
+import { uppercaseFirst } from "@pokemmo/utils"
+import { memoize } from "lodash-es"
+import { OptionsType, OptionTypeBase } from "react-select"
 const allPokemon: PokedexMon[] = require("@pokemmo/data/pokemon.csv");
 
 export const allEggGroups = Array.from(
@@ -132,7 +132,7 @@ export const filterLoadedDexOptionsSync = (
     optionLoader: typeof loadPokedexOptionsSync = loadPokedexOptionsSync,
 ) => (input: string | null) => {
     const options = optionLoader(input);
-    return options.filter(filterMethod).slice(0, 20);
+    return options.filter(filterMethod)//.slice(0, 20);
 };
 
 export const loadOwnPokemonOptionsSync = (filter: string | null) => {
